@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -15,15 +16,16 @@ const Hero = () => {
               and discovering career opportunities that align with their passions.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-brand-blue hover:bg-brand-darkBlue text-white px-8">
+              <Button size="lg" className="bg-brand-blue hover:bg-brand-darkBlue text-white px-8 h-12">
                 Create Your Profile
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-300 text-gray-700">
-                Explore Jobs
+              <Button size="lg" variant="outline" className="border-gray-300 text-gray-700 h-12">
+                Explore Jobs <ArrowRight size={16} className="ml-2" />
               </Button>
             </div>
             <div className="pt-4">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 flex items-center gap-1.5">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
                 Join over <span className="font-medium">10,000+</span> professionals and <span className="font-medium">2,500+</span> companies
               </p>
             </div>
@@ -35,8 +37,12 @@ const Hero = () => {
             <div className="relative">
               <div className="bg-white rounded-xl shadow-xl p-6 max-w-md mx-auto">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-brand-lightBlue rounded-full flex items-center justify-center">
-                    <span className="text-brand-blue font-bold text-xl">JP</span>
+                  <div className="w-16 h-16 bg-brand-lightBlue rounded-full flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" 
+                      alt="Jane Porter"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Jane Porter</h3>
@@ -51,8 +57,14 @@ const Hero = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex -space-x-2">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white" />
+                      {[
+                        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+                        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+                        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
+                      ].map((img, i) => (
+                        <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                          <img src={img} alt={`Connection ${i+1}`} className="w-full h-full object-cover" />
+                        </div>
                       ))}
                     </div>
                     <span className="text-sm text-gray-600">+42 connections</span>
@@ -60,7 +72,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -bottom-8 -right-8 bg-white rounded-lg shadow-lg p-4 w-48">
+              <div className="absolute -bottom-8 -right-8 bg-white rounded-lg shadow-lg p-4 w-48 animate-pulse-subtle">
                 <div className="flex items-center space-x-2 mb-2">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                     <span className="text-green-600 font-bold text-xs">TD</span>

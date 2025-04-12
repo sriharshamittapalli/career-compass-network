@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import JobCard, { JobData } from "./JobCard";
 import { ArrowRight } from "lucide-react";
 
-// Sample job listings
+// Sample job listings with improved data
 const jobs: JobData[] = [
   {
     id: "1",
     title: "Senior Frontend Developer",
     company: "TechInnovate",
-    logo: "",
+    logo: "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
     location: "San Francisco, CA (Remote)",
     type: "Full-time",
     salary: "$120K - $150K",
@@ -21,7 +21,7 @@ const jobs: JobData[] = [
     id: "2",
     title: "Product Designer",
     company: "DesignCraft",
-    logo: "",
+    logo: "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
     location: "New York, NY",
     type: "Full-time",
     salary: "$90K - $115K",
@@ -32,7 +32,7 @@ const jobs: JobData[] = [
     id: "3",
     title: "Data Scientist",
     company: "AnalyticsAI",
-    logo: "",
+    logo: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
     location: "Remote",
     type: "Full-time",
     salary: "$125K - $160K",
@@ -45,14 +45,14 @@ const FeaturedJobs = () => {
   return (
     <section className="section-padding">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
             <h2 className="heading-lg text-gray-900">Featured Job Opportunities</h2>
             <p className="text-gray-600 mt-2">Discover your next career move</p>
           </div>
-          <Button variant="link" className="text-brand-blue font-medium mt-2 md:mt-0 p-0 h-auto flex items-center">
+          <Button variant="link" className="text-brand-blue font-medium mt-3 md:mt-0 p-0 h-auto flex items-center group">
             Browse all jobs
-            <ArrowRight size={16} className="ml-1" />
+            <ArrowRight size={16} className="ml-1.5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
         

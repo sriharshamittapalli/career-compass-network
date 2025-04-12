@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import ProfileCard, { ProfileData } from "./ProfileCard";
 import { ArrowRight } from "lucide-react";
 
-// Sample profile data
+// Sample profile data with improved images
 const profiles: ProfileData[] = [
   {
     id: "1",
@@ -44,14 +44,14 @@ const FeaturedProfiles = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div>
             <h2 className="heading-lg text-gray-900">Featured Professionals</h2>
             <p className="text-gray-600 mt-2">Connect with top talent across various industries</p>
           </div>
-          <Button variant="link" className="text-brand-blue font-medium mt-2 md:mt-0 p-0 h-auto flex items-center">
+          <Button variant="link" className="text-brand-blue font-medium mt-3 md:mt-0 p-0 h-auto flex items-center group">
             View all profiles
-            <ArrowRight size={16} className="ml-1" />
+            <ArrowRight size={16} className="ml-1.5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
         

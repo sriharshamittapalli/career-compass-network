@@ -23,7 +23,7 @@ const ProfileCard = ({ profile, featured = false }: ProfileCardProps) => {
   return (
     <div 
       className={`bg-white rounded-xl overflow-hidden card-hover ${
-        featured ? 'border-2 border-brand-blue/20' : 'border border-gray-200'
+        featured ? 'border-2 border-brand-blue/20 shadow-md' : 'border border-gray-200'
       }`}
     >
       {featured && (
@@ -34,7 +34,7 @@ const ProfileCard = ({ profile, featured = false }: ProfileCardProps) => {
       
       <div className="p-6">
         <div className="flex items-center space-x-4">
-          <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden">
+          <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
             <img 
               src={profile.avatar || "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"} 
               alt={profile.name}
@@ -44,11 +44,11 @@ const ProfileCard = ({ profile, featured = false }: ProfileCardProps) => {
           <div>
             <h3 className="font-semibold text-lg text-gray-900">{profile.name}</h3>
             <p className="text-gray-600 flex items-center">
-              <BriefcaseIcon size={14} className="mr-1" />
+              <BriefcaseIcon size={14} className="mr-1.5 text-gray-400" />
               <span>{profile.title}</span>
             </p>
-            <p className="text-gray-500 text-sm flex items-center">
-              <MapPinIcon size={14} className="mr-1" />
+            <p className="text-gray-500 text-sm flex items-center mt-0.5">
+              <MapPinIcon size={14} className="mr-1.5 text-gray-400" />
               <span>{profile.location}</span>
             </p>
           </div>
@@ -78,7 +78,7 @@ const ProfileCard = ({ profile, featured = false }: ProfileCardProps) => {
           <div className="text-sm text-gray-500">
             <span className="text-brand-blue font-medium">{profile.connections}</span> connections
           </div>
-          <Button size="sm" variant="outline" className="h-8 rounded-full">
+          <Button size="sm" variant="outline" className="h-9 rounded-full">
             <LinkIcon size={14} className="mr-1.5" />
             Connect
           </Button>
