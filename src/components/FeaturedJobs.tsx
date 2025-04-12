@@ -12,7 +12,7 @@ const jobs: JobData[] = [
     logo: "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
     location: "San Francisco, CA (Remote)",
     type: "Full-time",
-    salary: "$120K - $150K",
+    salary: "$120K - $160K",
     posted: "Posted 2 days ago",
     description: "We're looking for a senior frontend developer with expertise in React and TypeScript to join our team building innovative web applications.",
     featured: true
